@@ -1,0 +1,4 @@
+CalcA.MainActivity, CalcA;md5f0d30808fd0c9d8c1fba3691795aafca.MainActivity
+CalcA.MainActivity, CalcA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f0d30808fd0c9d8c1fba3691795aafca.MainActivity
+CalcA.MainActivity;md5f0d30808fd0c9d8c1fba3691795aafca.MainActivity
+calca.MainActivity;md5f0d30808fd0c9d8c1fba3691795aafca.MainActivity
