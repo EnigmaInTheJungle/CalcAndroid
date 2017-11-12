@@ -49,15 +49,18 @@ namespace CalcA
             x = double.Parse(firstnumber.Text.ToString());
             y = double.Parse(secondnumber.Text.ToString());
             op = oper.Text;
-            tv.Text = Task.Run(() => Calculate(x, y, op)).Result;
+            //tv.Text = Task.Run(() => Calculate(x, y, op)).Result;
+            tv.Text = Calculate.Calc(x, y, op).ToString();
         }
 
-        public async Task<string> Calculate(double a, double b, string op)
-        {
-            var param = "a=" + a + "&b=" + b + "&op=" + op;
-            string response = await client.GetStringAsync("http://192.168.0.103:8888?" + param);
-            return response;
-        }
+        //public async Task<string> Calculate(double a, double b, string op)
+        //{
+        //    var param = "a=" + a + "&b=" + b + "&op=" + op;
+        //    string response = await client.GetStringAsync("http://192.168.0.103:8888?" + param);
+        //    return response;
+        //}
+
+        
 
         public void OnClick(View v)
         {
