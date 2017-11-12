@@ -55,10 +55,10 @@ namespace CalcAutoTest
             app.EnterText(but1);
             app.Tap(calc.SecondNumber);
             app.EnterText(but2);
-            string fn = calc.FirstNumber.ToString();
-            string sn = calc.SecondNumber.ToString();
-            Assert.AreEqual(resFN, fn);
-            Assert.AreEqual(resSN, sn);
+            AppResult[] fn = app.Query(calc.FirstNumber);
+            AppResult[] sn = app.Query(calc.SecondNumber);
+            Assert.AreEqual(resFN, fn[0].Text);
+            Assert.AreEqual(resSN, sn[0].Text);
         }
 
         [TestCase("5", "2", "+", "5", "2", "+")]
@@ -73,15 +73,15 @@ namespace CalcAutoTest
             app.EnterText(b);
             app.Tap(calc.Operation);
             app.EnterText(op);
-            string fn = calc.FirstNumber.ToString();
-            string sn = calc.SecondNumber.ToString();
-            string oper = calc.Operation.ToString();
-            Assert.AreEqual(resFN, fn);
-            Assert.AreEqual(resSN, sn);
-            Assert.AreEqual(resOp, oper);
+            AppResult[] fn = app.Query(calc.FirstNumber);
+            AppResult[] sn = app.Query(calc.SecondNumber);
+            AppResult[] oper = app.Query(calc.Operation);
+            Assert.AreEqual(resFN, fn[0].Text);
+            Assert.AreEqual(resSN, sn[0].Text);
+            Assert.AreEqual(resOp, oper[0].Text);
         }
 
-        [TestCase("11", "7", "p", "18")]
+        [TestCase("11", "7", "+", "18")]
         [TestCase("14", "3", "-", "11")]
         [TestCase("15", "6", "*", "90")]
         [TestCase("80", "20", "/", "4")]
@@ -94,8 +94,8 @@ namespace CalcAutoTest
             app.Tap(calc.Operation);
             app.EnterText(op);
             app.Tap(calc.btnCalc);
-            string res = calc.textResult.ToString();
-            Assert.AreEqual(expRes, res);
+            AppResult[] results = app.Query(calc.textResult);
+            Assert.AreEqual(expRes, results[0].Text);
         }
     }
 }
