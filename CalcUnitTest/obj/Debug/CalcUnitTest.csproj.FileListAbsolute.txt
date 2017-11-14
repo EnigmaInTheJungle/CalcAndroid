@@ -25,3 +25,5 @@ D:\С#1708\Team\CalcA\AndroidCalc\CalcUnitTest\obj\Debug\CalcUnitTest.csprojReso
 D:\С#1708\Team\CalcA\AndroidCalc\CalcUnitTest\obj\Debug\CalcUnitTest.csproj.CoreCompileInputs.cache
 D:\С#1708\Team\CalcA\AndroidCalc\CalcUnitTest\obj\Debug\CalcUnitTest.dll
 D:\С#1708\Team\CalcA\AndroidCalc\CalcUnitTest\obj\Debug\CalcUnitTest.pdb
+D:\С#1708\Team\CalcA\AndroidCalc\CalcUnitTest\bin\Debug\Xamarin.UITest.dll
+D:\С#1708\Team\CalcA\AndroidCalc\CalcUnitTest\bin\Debug\Xamarin.UITest.xml
